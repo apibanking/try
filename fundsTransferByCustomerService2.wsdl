@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="fundsTransferByCustomerService2" targetNamespace="http://www.quantiguous.com/services" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://www.quantiguous.com/services" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <binding hasEncoding="false" imported="true" name="fundsTransferByCustomerService2HttpBinding" originalBindingStyle="document"/>
+        <generatedXSD location="fundsTransferByCustomerService2_InlineSchema1.xsd"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <wsdl:types>
+    
+        <xsd:schema targetNamespace="http://www.quantiguous.com/services">
+      <xsd:include schemaLocation="fundsTransferByCustomerService2.xsd"/>
+    </xsd:schema>
+    </wsdl:types>
+  <wsdl:message name="transferRequestMsg">
+    <wsdl:part element="tns:transfer" name="transferParameters"/>
+  </wsdl:message>
+  <wsdl:message name="transferResponseMsg">
+    <wsdl:part element="tns:transferResponse" name="transferResult"/>
+  </wsdl:message>
+    <wsdl:message name="payInvoiceRequestMsg">
+    <wsdl:part element="tns:payInvoice" name="payInvoiceParameters"/>
+  </wsdl:message>
+    <wsdl:message name="payInvoiceResponseMsg">
+    <wsdl:part element="tns:payInvoiceResponse" name="payInvoiceResult"/>
+  </wsdl:message>
+    <wsdl:message name="getStatusRequestMsg">
+    <wsdl:part element="tns:getStatus" name="getStatusParameters"/>
+  </wsdl:message>
+    <wsdl:message name="getStatusResponseMsg">
+    <wsdl:part element="tns:getStatusResponse" name="getStatusResult"/>
+  </wsdl:message>
+    <wsdl:message name="getBalanceRequestMsg">
+    <wsdl:part element="tns:getBalance" name="getBalanceParameters"/>
+  </wsdl:message>
+    <wsdl:message name="getBalanceResponseMsg">
+    <wsdl:part element="tns:getBalanceResponse" name="getBalanceResult"/>
+  </wsdl:message>
+    <wsdl:portType name="fundsTransferByCustomerService2">
+    <wsdl:operation name="transfer">
+      <wsdl:documentation>The transfer funds to a beneficiary, the beneificiary could be pre-registered or specified at the time of the transaction. The method of transfer can specified or left to the service to choose.</wsdl:documentation>
+            <wsdl:input message="tns:transferRequestMsg" name="transferRequest"/>
+            <wsdl:output message="tns:transferResponseMsg" name="transferResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="payInvoice">
+      <wsdl:documentation>To pay an invoice received from a supplier. Details of the invoice can be supplied , and payment vouchers can be generated and sent to the suppliers for better and easier reconciliation.</wsdl:documentation>
+            <wsdl:input message="tns:payInvoiceRequestMsg" name="payInvoiceRequest"/>
+            <wsdl:output message="tns:payInvoiceResponseMsg" name="payInvoiceResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getStatus">
+      <wsdl:input message="tns:getStatusRequestMsg" name="getStatusRequest"/>
+      <wsdl:output message="tns:getStatusResponseMsg" name="getStatusResponse"/>
+    </wsdl:operation>
+        <wsdl:operation name="getBalance">
+      <wsdl:input message="tns:getBalanceRequestMsg" name="getBalanceRequest"/>
+      <wsdl:output message="tns:getBalanceResponseMsg" name="getBalanceResponse"/>
+    </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="fundsTransferByCustomerService2HttpBinding" type="tns:fundsTransferByCustomerService2">
+        <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="transfer">
+            <soap12:operation soapAction="http://www.quantiguous.com/services/transfer"/>
+            <wsdl:input name="transferRequest">
+                <soap12:body use="literal"/>
+            </wsdl:input>
+      <wsdl:output name="transferResponse">
+                <soap12:body use="literal"/>
+            </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="payInvoice">
+            <soap12:operation soapAction="http://www.quantiguous.com/services/payInvoice"/>
+            <wsdl:input name="payInvoiceRequest">
+                <soap12:body use="literal"/>
+            </wsdl:input>
+      <wsdl:output name="payInvoiceResponse">
+                <soap12:body use="literal"/>
+            </wsdl:output>
+    </wsdl:operation>
+        <wsdl:operation name="getStatus">
+            <soap12:operation soapAction="http://www.quantiguous.com/services/getStatus"/>
+            <wsdl:input name="getStatusRequest">
+                <soap12:body use="literal"/>
+            </wsdl:input>
+      <wsdl:output name="getStatusResponse">
+                <soap12:body use="literal"/>
+            </wsdl:output>
+    </wsdl:operation>
+        <wsdl:operation name="getBalance">
+      <soap12:operation soapAction="http://www.quantiguous.com/services/getBalance"/>
+      <wsdl:input name="getBalanceRequest">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getBalanceResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="fundsTransferByCustomerService2Soap11" type="tns:fundsTransferByCustomerService2">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="transfer">
+            <soap:operation soapAction="http://www.quantiguous.com/services/transfer"/>
+            <wsdl:input name="transferRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+    		<wsdl:output name="transferResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+    	</wsdl:operation>
+    	<wsdl:operation name="payInvoice">
+            <soap:operation soapAction="http://www.quantiguous.com/services/payInvoice"/>
+            <wsdl:input name="payInvoiceRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+    		<wsdl:output name="payInvoiceResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+    	</wsdl:operation>
+    	<wsdl:operation name="getStatus">
+            <soap:operation soapAction="http://www.quantiguous.com/services/getStatus"/>
+            <wsdl:input name="getStatusRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+    		<wsdl:output name="getStatusResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+    	</wsdl:operation>
+        <wsdl:operation name="getBalance">
+      <soap:operation soapAction="http://www.quantiguous.com/services/getBalance"/>
+      <wsdl:input name="getBalanceRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getBalanceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="fundsTransferByCustomerService2HttpService">
+    <wsdl:port binding="tns:fundsTransferByCustomerService2HttpBinding" name="fundsTransferByCustomerService2HttpPort">
+      <soap12:address location="http://api.quantiguous.com/fundsTransferByCustomerService2"/>
+    </wsdl:port>
+    <wsdl:port binding="tns:fundsTransferByCustomerService2Soap11" name="fundsTransferByCustomerService2HttpPortSoap11">
+    	<soap:address location="/fundsTransferByCustomerService2"/>
+    </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

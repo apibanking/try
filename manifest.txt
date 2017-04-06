@@ -1,0 +1,2 @@
+Main-Class: Try
+Class-Path: args4j-2.33.jar
